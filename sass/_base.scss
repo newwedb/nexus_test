@@ -1,0 +1,173 @@
+/* #Basic Styles
+================================================== */
+*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html{font-size:62.5%}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+  margin:0;padding:0;border:0}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block}
+body {font:1.5rem/1.65em "Noto Sans KR", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust:100%;line-height:1.6rem;letter-spacing:-.06rem}
+
+p {margin:0}
+p img {margin:0}
+hr{border:solid #ddd;border-width:1px 0 0;clear:both;margin:10px 0 30px;height:1px;
+  overflow:hidden;padding:0;position:absolute}
+
+/* #Links
+================================================== */
+a {text-decoration:none;outline:0;max-width:100%;max-width:none;}
+a:hover, a:focus, a:visited {outline:0;text-decoration:underline}
+p a, p a:visited {line-height:inherit}
+
+/* #Lists
+================================================== */
+ol,ul,dl{list-style:none}
+ul {list-style:none outside}
+ol {list-style:decimal;margin-left:15px}
+ul.square {list-style:square outside}
+ul.circle {list-style:circle outside}
+
+/* #Images
+================================================== */
+img, a img {
+  border:none;
+  padding:0;
+  margin:0;
+  display:inline-block;
+  max-width:100%;
+  height:auto;
+  image-rendering:optimizeQuality;
+}
+
+/* #Buttons
+================================================== */
+button{border:none}
+
+/* input */
+input {border-radius:0;-webkit-appearance:none;}
+input:checked[type="checkbox"] {background-color:#fff;-webkit-appearance:checkbox;} 
+input[type="text"], input[type="password"], input[type="email"], input[type="search"], input[type="image"],input[type="tel"], textarea {-webkit-appearance:none;border-radius:0} 
+
+input[type="text"],input[type="password"]{height:auto;line-height:normal;padding:.8rem .5rem}
+input[type="submit"], #submit, .button{
+  padding:9px 22px;
+  cursor:pointer;
+  border:none;
+  -webkit-appearance:none;
+  border-radius:0px;
+}
+
+input::placeholder,textarea::placeholder {
+  color:#999;letter-spacing:-.06rem}
+
+select {min-width:10rem;padding:1.1rem .8rem;border:1px solid #ddd;-webkit-appearance: none;-moz-appearance: none;appearance: none;color:#999;
+  background: #fff url($imgurl  + "btn_arrow_bl.svg") no-repeat 98% center;background-size:2.7rem;
+}  
+select::-ms-expand{display:none}
+
+
+/* #Table
+================================================== */
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+  width:100%;
+  padding:0;
+  margin:0 0 20px 0;
+}
+
+table caption {
+  padding:0 0 5px 0;
+  width:auto;
+  font-style:italic;
+  text-align:right;
+  font-size:1.2rem;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+th {
+  font-weight:bold;
+  text-transform:uppercase;
+  text-align:center;
+  padding:0.8rem 0.5rem;
+  border-style:solid;
+  border-width:1px;
+  border-left:none;
+  border-top:none;
+  font-size:1.4rem;
+}
+
+td {
+  padding:0.8rem 0.5rem;
+  border-style:solid;
+  border-width:1px;
+  border-left:none;
+  border-top:none;
+  font-size:1.5rem;
+  color:#999;
+}
+
+tr th:first-child, tr td:first-child{
+  border-left-style:solid;
+  border-left-width:1px;
+}
+
+tr:first-child th, tr:first-child td{
+  border-top-style:solid;
+  border-top-width:1px;
+}
+
+
+#top th.nobg {
+  background:none;
+  border-top:0;
+}
+
+
+/* #Other elements
+================================================== */
+iframe, object, embed{
+  max-width:100%;
+}
+
+/* #Misc
+================================================== */
+.hidden{position:absolute;top:0;visibility:hidden}
+.fl{float:left}
+.fr{float:right}
+.cl{clear:both}
+
+
+/* checkbox */
+.check_label{position:relative;cursor:pointer;padding-left:3rem;
+  input{@include position-none}
+} 
+.checkmark{@include position($l:0,$t:0);width:2rem;height:2rem;border-radius:0.3rem;background-color:#eee;border:1px solid #ddd}
+.check_label:hover input ~ .checkmark{background-color:#eee}
+.check_label input:checked ~ .checkmark{background-color:#45BE79;border:0}
+.checkmark:after{content: "";position: absolute;display: none}
+.check_label input:checked ~ .checkmark:after {display: block}
+.check_label .checkmark:after{left:0.7rem;top:0.4rem;width: 5px;height: 10px;border: solid white;border-width: 0 3px 3px 0;-webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);transform: rotate(45deg)} 
+
+
+/* radio button */
+.check_radio{display:inline-block;position:relative;padding-left:3.5rem;margin-bottom:1.2rem;cursor:pointer;
+  -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;
+  input{@include position-none}
+}
+
+.check_radio .checkmark:after{left: 10px;  top: 6px;  width: 7px;  height: 12px;border: solid white;  border-width: 0 3px 3px 0;  -webkit-transform: rotate(45deg);  -ms-transform: rotate(45deg);  transform: rotate(45deg)}
+.radiobtn{position: absolute;top: 0;left: 0;height: 25px;width: 25px;background-color: #eee;border-radius: 50%;}
+.check_radio:hover input ~ .radiobtn{background-color: #ccc;}
+.check_radio input:checked ~ .radiobtn{background-color: #45BE79;}
+.radiobtn:after {content: "";position: absolute;display: none;}
+.check_radio input:checked ~ .radiobtn:after {display: block;}
+.check_radio .radiobtn:after {top: 9px;left: 9px;width: 8px;height: 8px;border-radius: 50%;background: white;}
+

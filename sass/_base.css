@@ -1,0 +1,202 @@
+@import "font.css";
+/* #Basic Styles
+================================================== */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /*font-size:100%;*/
+  /*font:inherit;*/
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  font: 15px/1.65em "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*color:#444;*/
+  -webkit-text-size-adjust: 100%;
+  line-height: 1em;
+}
+
+p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
+  margin-top: 1.5em;
+}
+
+p {
+  margin: 0.85em 0;
+}
+
+p img {
+  margin: 0;
+}
+
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 0;
+}
+
+/* #Links
+================================================== */
+a {
+  text-decoration: none;
+  outline: 0;
+  max-width: 100%;
+  max-width: none\9 ;
+}
+
+a:hover, a:focus, a:visited {
+  outline: 0;
+  text-decoration: underline;
+}
+
+p a, p a:visited {
+  line-height: inherit;
+}
+
+/* #Lists
+================================================== */
+ol, ul, dl {
+  list-style: none;
+}
+
+ul, ol {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none outside;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 15px;
+}
+
+ul.square {
+  list-style: square outside;
+}
+
+ul.circle {
+  list-style: circle outside;
+}
+
+/* #Images
+================================================== */
+img, a img {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  image-rendering: optimizeQuality;
+}
+
+/* #Buttons
+================================================== */
+input[type=submit], #submit, .button {
+  padding: 9px 22px;
+  cursor: pointer;
+  border: none;
+  -webkit-appearance: none;
+  border-radius: 0px;
+}
+
+/* #Table
+================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-size: 13px;
+}
+
+table caption {
+  padding: 0 0 5px 0;
+  width: auto;
+  font-style: italic;
+  text-align: right;
+  font-size: 12px;
+}
+
+th {
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 9px 12px;
+  border-style: solid;
+  border-width: 1px;
+  border-left: none;
+  border-top: none;
+}
+
+td {
+  font-size: 13px;
+  padding: 9px 12px;
+  border-style: solid;
+  border-width: 1px;
+  border-left: none;
+  border-top: none;
+}
+
+tr th:first-child, tr td:first-child {
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+tr:first-child th, tr:first-child td {
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+#top th.nobg {
+  background: none;
+  border-top: 0;
+}
+
+/* #Other elements
+================================================== */
+iframe, object, embed {
+  max-width: 100%;
+}
+
+/* #Misc
+================================================== */
+.hidden {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.cl {
+  clear: both;
+}
+
+/*# sourceMappingURL=base.css.map */
